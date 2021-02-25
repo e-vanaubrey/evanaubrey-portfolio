@@ -1,0 +1,216 @@
+@import '../styles/custom-media.scss';
+@import '../styles/custom-properties.css';
+
+.root {
+  position: relative;
+  z-index: 100;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1350px;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . .";
+  
+
+  @include --media-min-small {
+    padding: 1.5em 1.5em;
+  }
+}
+
+.headshot{
+  margin: auto;
+  a {
+    text-decoration: none !important;
+  }
+}
+
+.headshotImg{
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.headerName{
+font-size: var(--font-title2-size);
+line-height: var(--font-title2-line-height);
+font-weight: 600;
+text-align: center;
+color: var(--color-black);
+  @include --media-max-small{
+    font-size: var(--font-title4-size);
+  }
+}
+.headerTagline{
+  text-align: center;
+  color: var(--color-gray);
+  @include --media-max-small{
+    display: none;
+  }
+}
+
+.branding {
+  font-weight: 600;
+  margin: auto 0 !important;
+
+  a {
+    display: inline-block;
+    padding: 0.5em;
+    color: inherit;
+    text-decoration: none;
+
+    @media (hover: hover) {
+     &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  @include --media-max-small{
+    opacity: 0;
+  }
+}
+
+.toggleNavButton {
+  appearance: none;
+  font-size: 25px;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: calc(14 / 17 / 2 * 1rem);
+  outline: none;
+  color: inherit;
+
+  svg {
+    display: block;
+    fill: inherit;
+    @include --media-max-small{
+      float: right;
+    }
+  }
+
+  @include --media-min-small {
+    display: none;
+  }
+}
+
+.nav {
+  display: none;
+  margin: auto 0 !important;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media (hover: hover) {
+    ul li a:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  @include --media-max-small {
+    position: fixed;
+    background: var(--color-white);
+    color: var(--color-black);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+
+
+    ul {
+      padding: 1rem 0;
+    }
+
+    ul li a {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  @include --media-min-small {
+    display: block;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    ul li a {
+      padding: 0.5rem;
+    }
+  }
+}
+
+.showNav {
+  display: block;
+}
+
+// Dark mode toggle button
+.toggleModeButton{
+  margin: auto 0;
+}
+
+  label {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 25px;
+    border-radius: 100px;
+    background-color: rgb(37, 37, 37);
+    overflow: hidden;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: 0.3s ease;
+    }
+
+    &:before {
+      background-color: rgb(255, 255, 255);
+    }
+
+    &:after {
+      background-color: rgb(37, 37, 37);
+      left: -58px;
+      transform: scale(0.00001);
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked + label {
+      border: 1px solid white;
+      &:before {
+        background-color: rgb(255, 255, 255);
+        transform: translateX(20px);
+      }
+
+      &:after {
+        transform: translateX(75px) scale(1);
+      }
+    }
+  }
+

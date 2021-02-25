@@ -4,8 +4,8 @@ import {cn, buildImageObj} from '../lib/helpers'
 import {imageUrlFor} from '../lib/image-url'
 import BlockText from './block-text'
 
-import styles from './project-preview.module.css'
-import {responsiveTitle3} from './typography.module.css'
+import styles from './project-preview.module.scss'
+import {responsiveTitle3} from './typography.module.scss'
 
 function ProjectPreview (props) {
   return (
@@ -21,12 +21,14 @@ function ProjectPreview (props) {
           />
         )}
       </div>
-      <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
-      {props._rawExcerpt && (
+      <div className={styles.textContainer}>
+      <h3 className={styles.title}>{props.title}</h3>
+      {/* {props._rawExcerpt && (
         <div className={styles.excerpt}>
           <BlockText blocks={props._rawExcerpt} />
         </div>
-      )}
+      )} */}
+      </div>
     </Link>
   )
 }

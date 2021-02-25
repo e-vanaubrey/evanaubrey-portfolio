@@ -21,6 +21,11 @@ export default {
       description: 'Describe your portfolio for search engines and social media.'
     },
     {
+      name: 'location',
+      type: 'string',
+      title: 'Current Location'
+    },
+    {
       name: 'keywords',
       type: 'array',
       title: 'Keywords',

@@ -1,0 +1,78 @@
+@import './typography.module.scss';
+
+.root {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  background-color: var(--background-alt-1);
+  height:320px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  @include --media-max-small{
+    height: 240px
+  }
+}
+
+.root:hover{
+  z-index: 999;
+  transform: scale(1.05);
+  box-shadow: -1px 8px 21px -1px rgba(0,0,0,0.2);
+-webkit-box-shadow: -1px 8px 21px -1px rgba(0,0,0,0.2);
+-moz-box-shadow: -1px 8px 21px -1px rgba(0,0,0,0.2);
+}
+
+.textContainer{
+  padding: 0 12px 12px 12px;
+  height: 128px;
+  overflow: hidden;
+}
+
+.leadMediaThumb {
+  position: relative;
+  height: 200px;
+  border-radius: 6px 6px 0 0;
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+  }
+
+  @include --media-max-small{
+    height: 120px
+  }
+}
+
+.title {
+  @include base;
+
+  margin-top: 16px;
+
+  @include --media-max-small{
+    margin-top: 8px;
+    @include small;
+    height: calc(var(--font-small-line-height) * 3);
+    overflow: hidden;
+  }
+  
+}
+
+.excerpt {
+  height: auto;
+  width: 228px;
+   & p {
+    margin: 0 0 0.5em;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+  }
+
+   & strong {
+    font-weight: 600;
+  }
+}

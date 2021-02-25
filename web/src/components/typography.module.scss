@@ -1,7 +1,7 @@
-@import '../styles/custom-media.css';
+@import '../styles/custom-media.scss';
 
 :root {
-  --base-unit: 17;
+  --base-unit: 16;
 
   /* Font sizes */
   --font-micro-size: calc(8 / var(--base-unit) * 1rem);
@@ -46,12 +46,12 @@
   line-height: var(--font-large-line-height);
 }
 
-.base {
+@mixin base {
   font-size: inherit;
   line-height: inherit;
 }
 
-.small {
+@mixin small {
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
 }
@@ -73,12 +73,12 @@
   line-height: var(--font-base-line-height);
   margin: 0.5rem 0 1rem 0;
 
-  @media (--media-min-small) {
+  @include --media-min-small {
     font-size: var(--font-base-size);
     line-height: var(--font-base-line-height);
   }
 
-  @media (--media-min-medium) {
+  @include --media-min-medium {
     font-size: var(--font-large-size);
     line-height: var(--font-large-line-height);
   }
@@ -88,18 +88,18 @@
   background: #eee;
 }
 
-.responsiveTitle1 {
+@mixin responsiveTitle1 {
   font-weight: 900;
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
   margin: 1rem 0 2rem;
 
-  @media (--media-min-small) {
+  @include --media-min-small {
     font-size: var(--font-title2-size);
     line-height: var(--font-title2-line-height);
   }
 
-  @media (--media-min-medium) {
+  @include --media-min-medium {
     font-size: var(--font-title1-size);
     line-height: var(--font-title1-line-height);
   }
@@ -111,29 +111,29 @@
   line-height: var(--font-large-line-height);
   margin: 1.5rem 0 0.5rem;
 
-  @media (--media-min-small) {
+  @include --media-min-small {
     font-size: var(--font-title3-size);
     line-height: var(--font-title3-line-height);
   }
 
-  @media (--media-min-medium) {
+  @include --media-min-medium {
     font-size: var(--font-title2-size);
     line-height: var(--font-title2-line-height);
   }
 }
 
-.responsiveTitle3 {
-  font-weight: 900;
+@mixin responsiveTitle3 {
+  font-weight: 700;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
-  margin: 1rem 0 0.5rem;
+  margin: 0 0 0.5rem;
 
-  @media (--media-min-small) {
+  @include --media-min-small {
     font-size: var(--font-large-size);
     line-height: var(--font-large-line-height);
   }
 
-  @media (--media-min-medium) {
+  @include --media-min-medium {
     font-size: var(--font-title3-size);
     line-height: var(--font-title3-line-height);
   }
@@ -144,12 +144,12 @@
   line-height: var(--font-base-line-height);
   margin: 1rem 0 0.5rem;
 
-  @media (--media-min-small) {
+  @include --media-min-small {
     font-size: var(--font-base-size);
     line-height: var(--font-base-line-height);
   }
 
-  @media (--media-min-medium) {
+  @include --media-min-medium {
     font-size: var(--font-large-size);
     line-height: var(--font-large-line-height);
   }

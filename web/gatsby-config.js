@@ -20,6 +20,8 @@ module.exports = {
         watchMode: !isProd,
         overlayDrafts: !isProd && token
       }
-    }
+    },
+    `gatsby-plugin-sass`,
+    'gatsby-plugin-dark-mode'
   ]
 }
