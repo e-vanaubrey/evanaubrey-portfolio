@@ -35,7 +35,7 @@ class Layout extends Component {
     var { children, onHideNav, onShowNav, showNav, siteTitle } = this.props
     return (
       <>
-        <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} location={location} />
+        <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav}/>
         <div className={styles.content}>{children}</div>
         <footer className={styles.footer}>
           <div className={styles.footerWrapper}>
