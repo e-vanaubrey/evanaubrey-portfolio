@@ -85,6 +85,7 @@ color: var(--color-black);
   padding: calc(14 / 17 / 2 * 1rem);
   outline: none;
   color: inherit;
+  z-index: 999;
 
   svg {
     display: block;
@@ -105,7 +106,7 @@ color: var(--color-black);
 
   ul {
     margin: 0;
-    padding: 0;
+    
   }
 
   ul li a {
@@ -132,11 +133,13 @@ color: var(--color-black);
 
 
     ul {
-      padding: 1rem 0;
-    }
-
-    ul li a {
-      padding: 0.5rem 1.5rem;
+      height: 100%;
+      padding: 4rem 3rem;
+      list-style: none;
+      text-align: center;
+      li{
+        margin: 0 auto 16px auto;
+      }
     }
   }
 
@@ -162,17 +165,20 @@ color: var(--color-black);
 // Dark mode toggle button
 .toggleModeButton{
   margin: auto 0;
+ 
 }
 
   label {
+    margin: auto;
     position: relative;
     display: block;
     width: 45px;
     height: 25px;
     border-radius: 100px;
-    background-color: rgb(37, 37, 37);
+    background-color: var(--color-white);
     overflow: hidden;
     cursor: pointer;
+    border: 2px solid var(--color-black);
 
     &:before,
     &:after {
@@ -188,11 +194,11 @@ color: var(--color-black);
     }
 
     &:before {
-      background-color: rgb(255, 255, 255);
+      background-color: var(--color-black);
     }
 
     &:after {
-      background-color: rgb(37, 37, 37);
+      background-color: var(--color-white);
       left: -58px;
       transform: scale(0.00001);
     }
@@ -202,9 +208,9 @@ color: var(--color-black);
     display: none;
 
     &:checked + label {
-      border: 1px solid white;
+      border: 1px solid var(--color-black);
       &:before {
-        background-color: rgb(255, 255, 255);
+        background-color: var(--color-black);
         transform: translateX(20px);
       }
 
@@ -214,3 +220,14 @@ color: var(--color-black);
     }
   }
 
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+  }
+  

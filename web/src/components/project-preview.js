@@ -21,14 +21,17 @@ function ProjectPreview (props) {
           />
         )}
       </div>
-      <div className={styles.textContainer}>
-      <h3 className={styles.title}>{props.title}</h3>
-      {/* {props._rawExcerpt && (
-        <div className={styles.excerpt}>
-          <BlockText blocks={props._rawExcerpt} />
+      {props.title && (
+        <div className={styles.textContainer}>
+        <h3 className={styles.title}>{props.title}</h3>
+        {/* {props._rawExcerpt && (
+          <div className={styles.excerpt}>
+            <BlockText blocks={props._rawExcerpt} />
+          </div>
+        )} */}
         </div>
-      )} */}
-      </div>
+      )}
+      
     </Link>
   )
 }

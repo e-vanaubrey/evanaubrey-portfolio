@@ -14,10 +14,12 @@ const query = graphql`
 function LayoutContainer (props) {
   const [showNav, setShowNav] = useState(false)
   function handleShowNav () {
-    setShowNav(true)
+    setShowNav(true);
+    document.getElementById('hamburger').classList.add('active');
   }
   function handleHideNav () {
-    setShowNav(false)
+    setShowNav(false);
+    document.getElementById('hamburger').classList.remove('active');
   }
   return (
     <StaticQuery

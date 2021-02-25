@@ -31,7 +31,7 @@ body{
   --color-white: #fff;
   --color-accent: #156dff;
 
-  --background-alt-1: rgba(0,0,0,0.05)
+  --background-alt-1: rgba(23,42,92, 0.04)
 }
 
 body.dark{
@@ -40,9 +40,9 @@ body.dark{
   --color-gray: #697a90;
   --color-light-gray: #b4bcc7;
   --color-very-light-gray: #e7ebed;
-  --color-white: #202123;
+  --color-white: #0e0e19;
   --color-accent: #156dff;
 
-  --background-alt-1: rgba(255,255,255,0.04)
+  --background-alt-1: rgba(255,255,255,0.03)
 }
 
