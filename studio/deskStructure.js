@@ -1,8 +1,8 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { MdSettings } from "react-icons/md";
+import { MdEdit, MdSettings } from "react-icons/md";
 
 const hiddenDocTypes = listItem =>
-  !['category', 'person', 'sampleProject', 'siteSettings'].includes(listItem.getId())
+  !['category', 'person', 'sampleProject', 'siteSettings', 'nft'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -21,6 +21,10 @@ export default () =>
         .title('Sample projects')
         .schemaType('sampleProject')
         .child(S.documentTypeList('sampleProject').title('Sample projects')),
+      S.listItem()
+        .title('NFTs')
+        .schemaType('nft')
+        .child(S.documentTypeList('nft').title('NFTs')),
       S.listItem()
         .title('People')
         .schemaType('person')

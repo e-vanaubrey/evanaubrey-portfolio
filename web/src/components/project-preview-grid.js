@@ -12,7 +12,6 @@ function ProjectPreviewGrid (props) {
         {props.nodes &&
           props.nodes.map(node => (
             <li key={node.id}>
-              {console.log(node)}
               <ProjectPreview {...node} />
             </li>
           ))}

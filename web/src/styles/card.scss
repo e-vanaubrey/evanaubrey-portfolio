@@ -1,0 +1,67 @@
+@import './custom-media.scss';
+
+.carouselCard {
+    display: flex;
+    flex-flow: column;
+    height: 320px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: var(--background-alt-1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    
+    svg{
+        margin-bottom: 24px;
+    }
+
+    .titleBlock{
+        position: absolute;
+        left: 36px;
+        bottom: 36px;
+
+        .title{
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .subtitle{
+            font-size: 14px;
+        }
+        .timeline{
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    }
+}
+
+
+.react-multi-carousel-item > .carouselCard{
+    margin: 0 0.5em;
+}
+
+.react-multi-carousel-item:first-of-type > .carouselCard{
+    margin-left: 0;
+}
+
+.react-multi-carousel-item:last-of-type > .carouselCard{
+    margin-right: 0;
+}
+
+.react-multi-carousel-item:nth-of-type(1) > .carouselCard{
+    background: linear-gradient(90deg, #360E82 0%, #641CA4 100%);
+}
+
+.react-multi-carousel-item:nth-of-type(2) > .carouselCard{
+    background: linear-gradient(90deg, #FF6E4F 0%, #FF1841 100%);
+}
+
+.react-multi-carousel-item:nth-of-type(3) > .carouselCard{
+    background: url('../assets/img/microsoft-card-bg.png');
+    background-size: 100% 100%;
+}
+
+
+.react-multi-carousel-item {
+width: fit-content;
+}

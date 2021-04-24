@@ -20,7 +20,6 @@ class Layout extends Component {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + 'Seattle' + '&units=imperial&appid=' + key)
       .then(function (resp) { return resp.json() }) // Convert data to json
       .then(function (data) {
-        console.log(data)
         return data;
       })
       .then(weather => {
