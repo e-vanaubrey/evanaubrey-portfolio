@@ -26,6 +26,9 @@
     
     svg{
         margin-bottom: 24px;
+        @include --media-max-small{
+        width: 60%;
+        }
     }
 
     .titleBlock{
@@ -71,6 +74,9 @@
 .react-multi-carousel-item:nth-of-type(3) > .carouselCard{
     background: url('../assets/img/microsoft-card-bg.png');
     background-size: 100% 100%;
+    @include --media-max-small{
+        background-size: cover;
+    }
 }
 
 
