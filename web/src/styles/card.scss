@@ -24,12 +24,18 @@
     transition: all 0.2s ease-in-out;
     position: relative;
     
+    .hbo-logo{
+        transform-origin: center left;
+        transform: scale(1.2);
+    }
+    
     svg{
         margin-bottom: 24px;
         @include --media-max-small{
         width: 60%;
         }
     }
+    
 
     .titleBlock{
         position: absolute;
