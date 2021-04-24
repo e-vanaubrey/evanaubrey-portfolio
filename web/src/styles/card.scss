@@ -1,5 +1,17 @@
 @import './custom-media.scss';
 
+.carouselContainer{
+    width: calc(100% - 3em);
+    margin: 0 auto;
+    @include --media-max-small{
+        overflow: unset;
+
+        .react-multiple-carousel__arrow{
+            display: none;
+        }
+      }
+}
+
 .carouselCard {
     display: flex;
     flex-flow: column;

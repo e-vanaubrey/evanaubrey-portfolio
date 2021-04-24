@@ -111,10 +111,9 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        <Carousel
+      <Carousel
           responsive={responsive}
+          partialVisible
           containerClass="carouselContainer">
           <div className='carouselCard'>
             <div className='titleBlock'>
@@ -157,6 +156,9 @@ const IndexPage = props => {
             </div>
           </div>
         </Carousel>
+      <Container>
+        <h1 hidden>Welcome to {site.title}</h1>
+        
         {projectNodes && (
           <ProjectPreviewGrid
             title='Latest'
